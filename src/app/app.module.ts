@@ -15,6 +15,10 @@ import { AccountNumberComponent } from './shared/components/form/account-number/
 import { InputBoxComponent } from './shared/components/form/input/input.component';
 import { SubmitButtonComponent } from './shared/components/form/submit-button/submit-button.component';
 
+export function createTranslateLoader(http: Http) {
+    return new TranslateStaticLoader(http, './assets/i18n/US', '.json');
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +34,7 @@ import { SubmitButtonComponent } from './shared/components/form/submit-button/su
     HttpModule,
 		TranslateModule.forRoot({
 			provide: TranslateLoader,
-			useFactory: (http: Http) => new TranslateStaticLoader(http, '/i18n/US', '.json'),
+			useFactory: (createTranslateLoader),
 			deps: [Http]
 		})
   ],

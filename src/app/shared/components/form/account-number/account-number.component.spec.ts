@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
+import { InputBoxComponent } from '../input/input.component';
 import { AccountNumberComponent } from './account-number.component';
 
 describe('AccountNumberComponent', () => {
@@ -11,7 +12,10 @@ describe('AccountNumberComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AccountNumberComponent ]
+      declarations: [
+				InputBoxComponent,
+				AccountNumberComponent
+			]
     })
     .compileComponents();
   }));

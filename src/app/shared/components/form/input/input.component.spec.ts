@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { InputComponent } from './input.component';
+import { InputBoxComponent } from './input.component';
 
-describe('InputComponent', () => {
-  let component: InputComponent;
-  let fixture: ComponentFixture<InputComponent>;
+describe('InputBoxComponent', () => {
+  let component: InputBoxComponent;
+  let fixture: ComponentFixture<InputBoxComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InputComponent ]
+      declarations: [ InputBoxComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InputComponent);
+    fixture = TestBed.createComponent(InputBoxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
